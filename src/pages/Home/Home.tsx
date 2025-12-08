@@ -3,28 +3,42 @@ import { observer } from "mobx-react-lite";
 import { TeamSlide } from "~/widgets/Slides/TeamSlide";
 import { TitleSlide } from "~/widgets/Slides/TitleSlide";
 
-import { useInView } from "~/shared/lib/hooks/useInView";
-import { PageSection } from "~/shared/ui/PageSection";
+import { useSlideScroll } from "~/shared/lib/hooks/useSlideScroll";
+
+import styles from "./Home.module.scss";
+import { WorldSlide } from "~/widgets/Slides/WorldSlide";
+import { QuestSlide } from "~/widgets/Slides/QuestSlide";
+import { TeamProgressSlide } from "~/widgets/Slides/TeamProgressSlide";
 
 export const Home = observer(() => {
-  const title = useInView<HTMLDivElement>();
-  const team = useInView<HTMLDivElement>();
+  const active = useSlideScroll(5);
 
   return (
-    <main>
-      {/* --- Первый слайд --- */}
-      <PageSection visible={title.visible}>
-        <div ref={title.ref}>
+    <main className={styles.wrapper}>
+      <div
+        className={styles.slides}
+        style={{ transform: `translateY(-${active * 100}vh)` }}
+      >
+        <section className={styles.slide}>
           <TitleSlide />
-        </div>
-      </PageSection>
+        </section>
 
-      {/* --- Второй слайд --- */}
-      <PageSection visible={team.visible}>
-        <div ref={team.ref}>
+        <section className={styles.slide}>
           <TeamSlide />
-        </div>
-      </PageSection>
+        </section>
+
+        <section className={styles.slide}>
+          <WorldSlide />
+        </section>
+
+        <section className={styles.slide}>
+          <QuestSlide />
+        </section>
+
+        <section className={styles.slide}>
+          <TeamProgressSlide />
+        </section>
+      </div>
     </main>
   );
 });

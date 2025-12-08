@@ -1,0 +1,101 @@
+.container {
+  height: 100vh;
+  padding: 40px;
+  background: #0f0d0a;
+  color: #f4e5c3;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  text-align: center;
+  font-size: clamp(2rem, 3vw, 3rem);
+  margin-bottom: 20px;
+  text-shadow: 0 0 12px rgba(255, 220, 150, 0.6);
+}
+
+.content {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+/* Уровень команды */
+.levelPanel {
+  width: 340px;
+  text-align: center;
+}
+
+.levelCircle {
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  margin: 0 auto 20px auto;
+  border: 4px solid rgba(255, 220, 150, 0.5);
+  box-shadow: 0 0 20px rgba(255, 220, 150, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.levelValue {
+  font-size: 5rem;
+  font-weight: bold;
+  color: #ffd98a;
+  text-shadow: 0 0 15px rgba(255, 200, 120, 0.7);
+}
+
+.levelLabel {
+  margin-top: -10px;
+  font-size: 1.1rem;
+  opacity: 0.8;
+}
+
+.description {
+  opacity: 0.85;
+  font-size: 0.95rem;
+  margin-top: 15px;
+}
+
+/* Характеристики */
+.statsPanel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.statRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.statLabel {
+  width: 200px;
+  opacity: 0.9;
+}
+
+.progressBar {
+  flex: 1;
+  height: 12px;
+  border-radius: 8px;
+  background: rgba(255, 245, 215, 0.08);
+  overflow: hidden;
+  border: 1px solid rgba(255, 230, 180, 0.2);
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, #ffd98a, #ffb55c);
+  box-shadow: 0 0 10px rgba(255, 190, 120, 0.4);
+}
+
+.statValue {
+  width: 50px;
+  text-align: right;
+  opacity: 0.9;
+}

@@ -7,29 +7,28 @@
   gap: 40px;
   background: #0f0d0a;
   color: #f4e5c3;
-  overflow: hidden; /* важно! */
+  overflow: hidden;
 }
 
 .mapWrapper {
   width: min(45vw, 45vh);
   aspect-ratio: 1 / 1;
   position: relative;
-  flex-shrink: 0;
-  transition: transform 0.1s linear;
+  transition: transform 0.15s ease-out;
 }
 
-.parallax {
+.map {
   position: absolute;
   inset: 0;
-  background-image: url("./images/map.png");
+  background-image: url("/images/map.png");
   background-size: contain;
-  background-repeat: no-repeat;
   background-position: center;
+  background-repeat: no-repeat;
 }
 
 .content {
   max-width: 500px;
-  transition: transform 0.1s linear;
+  transition: transform 0.2s ease-out;
 }
 
 @keyframes fadeIn {

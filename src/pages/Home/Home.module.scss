@@ -1,0 +1,16 @@
+.wrapper {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.slides {
+  height: 100vh;
+  width: 100%;
+  transition: transform 0.9s ease-in-out;
+}
+
+.slide {
+  height: 100vh;
+  width: 100%;
+}

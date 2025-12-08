@@ -1,0 +1,66 @@
+.container {
+  height: 100vh;
+  padding: 40px;
+  background: #0f0d0a;
+  color: #f4e5c3;
+  overflow: hidden;
+}
+
+.title {
+  font-size: clamp(2rem, 3vw, 3rem);
+  text-align: center;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px rgba(255, 220, 150, 0.6);
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  height: calc(100% - 80px);
+  align-items: center;
+}
+
+.mapWrapper {
+  flex: 1;
+  max-width: 600px;
+  animation: float 6s ease-in-out infinite alternate;
+}
+
+.map {
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* Плавающая анимация карты */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-12px);
+  }
+}
+
+.locations {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.locationCard {
+  padding: 14px 20px;
+  border: 1px solid rgba(255, 230, 180, 0.25);
+  border-radius: 12px;
+  background: rgba(255, 245, 215, 0.05);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.locationCard:hover {
+  transform: translateX(6px);
+  box-shadow: 0 0 12px rgba(255, 220, 150, 0.4);
+}
