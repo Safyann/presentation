@@ -1,0 +1,82 @@
+.container {
+  height: 100vh;
+  padding: 40px;
+  background: #0f0d0a;
+  color: #f4e5c3;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  text-align: center;
+  font-size: clamp(2rem, 3vw, 3rem);
+  text-shadow: 0 0 10px rgba(255, 200, 120, 0.5);
+  margin-bottom: 20px;
+}
+
+.content {
+  display: flex;
+  flex: 1;
+  gap: 40px;
+  align-items: center;
+}
+
+/* Левая часть */
+.bossIllustration {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.bossIllustration img {
+  max-width: 450px;
+  filter: drop-shadow(0 0 20px rgba(255, 200, 120, 0.3));
+}
+
+/* Правая часть */
+.bossList {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.bossCard {
+  padding: 20px;
+  border: 1px solid rgba(255, 230, 160, 0.3);
+  border-radius: 12px;
+  background: rgba(255, 245, 215, 0.05);
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.bossCard:hover {
+  transform: translateX(6px);
+  box-shadow: 0 0 12px rgba(255, 220, 150, 0.4);
+}
+
+.active {
+  border-color: #ffd98a;
+  background: rgba(255, 225, 150, 0.12);
+  box-shadow: 0 0 14px rgba(255, 220, 120, 0.5);
+}
+
+.sectionTitle {
+  margin-top: 12px;
+  color: #ffd98a;
+  font-weight: bold;
+}
+
+.danger {
+  opacity: 0.85;
+}
+
+.attacks li::before {
+  content: "⚔️ ";
+}
+
+.reward {
+  color: #ffe5a0;
+  font-weight: bold;
+  margin-top: 6px;
+}

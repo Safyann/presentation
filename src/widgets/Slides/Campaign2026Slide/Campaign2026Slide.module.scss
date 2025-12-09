@@ -1,0 +1,51 @@
+.container {
+  height: 100vh;
+  padding: 40px;
+  background: #0f0d0a;
+  color: #f4e5c3;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  text-align: center;
+  font-size: clamp(2rem, 3vw, 3rem);
+  margin-bottom: 20px;
+  text-shadow: 0 0 12px rgba(255, 220, 150, 0.6);
+}
+
+.content {
+  display: flex;
+  flex: 1;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Иллюстрация */
+.art {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.art img {
+  max-width: 450px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255, 200, 120, 0.4);
+}
+
+/* Цели */
+.goals {
+  flex: 1;
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+}
+
+.goals ul li::before {
+  content: "✦ ";
+  color: #ffd98a;
+}

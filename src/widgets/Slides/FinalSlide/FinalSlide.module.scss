@@ -1,0 +1,43 @@
+.container {
+  height: 100vh;
+  background: linear-gradient(180deg, #0f0d0a 0%, #2a2118 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: #f4e5c3;
+  text-align: center;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: url("/images/final-glow.png");
+  background-size: cover;
+  opacity: 0.25;
+  animation: fade 6s ease-in-out infinite alternate;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0.15;
+  }
+  100% {
+    opacity: 0.35;
+  }
+}
+
+.title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  z-index: 1;
+  text-shadow: 0 0 20px rgba(255, 220, 150, 0.5);
+}
+
+.subtitle {
+  margin-top: 10px;
+  opacity: 0.8;
+  font-size: 1.2rem;
+  z-index: 1;
+}

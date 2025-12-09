@@ -1,4 +1,5 @@
 import { useMouseParallax } from "~/shared/lib/hooks/useMouseParallax";
+
 import styles from "./TitleSlide.module.scss";
 
 export const TitleSlide: React.FC = () => {

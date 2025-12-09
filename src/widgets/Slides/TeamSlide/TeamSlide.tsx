@@ -1,7 +1,6 @@
 import { useState } from "react";
 
 import { HeroModal } from "./HeroModal";
-
 import styles from "./TeamSlide.module.scss";
 
 interface Hero {

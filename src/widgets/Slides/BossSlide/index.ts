@@ -1,0 +1,1 @@
+export { BossSlide } from "./BossSlide";
