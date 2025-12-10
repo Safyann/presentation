@@ -2,11 +2,10 @@ import styles from "./TeamProgressSlide.module.scss";
 
 export const TeamProgressSlide = () => {
   const stats = [
-    { label: "Скорость релизов", value: 85 },
-    { label: "Качество кода", value: 78 },
-    { label: "Закрытие квестов", value: 92 },
-    { label: "Синхронизация команды", value: 88 },
-    { label: "Внедрение метрик", value: 70 },
+    { label: "Скорость релизов", value: 65 },
+    { label: "Качество кода", value: 68 },
+    { label: "Закрытие квестов", value: 82 },
+    { label: "Синхронизация команды", value: 78 },
     { label: "Рост компетенций", value: 81 },
   ];
 
